@@ -104,12 +104,12 @@
         
         <form id="otpForm">
             <div class="otp-inputs">
-                <input type="text" maxlength="1" required>
-                <input type="text" maxlength="1" required>
-                <input type="text" maxlength="1" required>
-                <input type="text" maxlength="1" required>
-                <input type="text" maxlength="1" required>
-                <input type="text" maxlength="1" required>
+                <input type="number" maxlength="1" required>
+                <input type="number" maxlength="1" required>
+                <input type="number" maxlength="1" required>
+                <input type="number" maxlength="1" required>
+                <input type="number" maxlength="1" required>
+                <input type="number" maxlength="1" required>
             </div>
  
             <button onclick="window.location.href='4.html';" type="submit">Verify</button>
@@ -125,6 +125,10 @@
 
             inputs.forEach((input, index) => {
                 input.addEventListener("input", (e) => {
+                    // Validation: s'assurer que l'entrée est un nombre
+                    if (!/^\d$/.test(e.target.value)) {
+                        e.target.value = "";
+                    }
                     if (e.target.value.length === 1 && index < inputs.length - 1) {
                         inputs[index + 1].focus();
                     }
